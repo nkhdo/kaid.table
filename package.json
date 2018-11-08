@@ -1,0 +1,54 @@
+{
+  "name": "kaid.table",
+  "version": "1.1.1",
+  "description": "Simple data table library",
+  "main": "lib/Library.js",
+  "files": [
+    "src/",
+    "dist/",
+    "lib/"
+  ],
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --require @babel/register --colors ./test/*.spec.js",
+    "coverage": "nyc --reporter=text --reporter=lcov npm test",
+    "lint": "eslint src/**/*.js",
+    "build:umdmin": "webpack --mode=production --output-library-target=umd",
+    "build:umd": "webpack --mode=development --output-library-target=umd",
+    "build:commonjs": "webpack --mode=development --output-library-target=commonjs2",
+    "build": "npm-run-all build:*",
+    "dev:umd": "webpack --progress --colors --watch --mode=development --output-library-target=umd",
+    "dev:commonjs": "webpack --progress --colors --watch --mode=development --output-library-target=commonjs2",
+    "dev": "npm-run-all --parallel dev:*",
+    "prepublishOnly": "npm-run-all test build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkhdo/kaid.table.git"
+  },
+  "keywords": [],
+  "author": "Hoang Do <me@kaid.sh>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkhdo/kaid.table/issues"
+  },
+  "homepage": "https://table.kaid.sh",
+  "devDependencies": {
+    "@babel/core": "~7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "~7.0.0",
+    "@babel/preset-env": "~7.1.0",
+    "@babel/register": "~7.0.0",
+    "babel-loader": "~8.0.4",
+    "chai": "~4.2.0",
+    "cross-env": "~5.2.0",
+    "eslint": "~5.7.0",
+    "eslint-loader": "~2.1.1",
+    "mocha": "~5.2.0",
+    "npm-run-all": "~4.1.3",
+    "nyc": "~13.0.1",
+    "sinon": "~6.3.5",
+    "sinon-chai": "~3.2.0",
+    "webpack": "~4.20.2",
+    "webpack-cli": "~3.1.2",
+    "yargs": "~12.0.2"
+  }
+}
