@@ -1,5 +1,5 @@
 {
-  "name": "KaidTable",
+  "name": "kaid.table",
   "version": "1.0.0",
   "description": "Simple data table library",
   "main": "lib/KaidTable.js",
