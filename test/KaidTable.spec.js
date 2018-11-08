@@ -10,13 +10,13 @@ chai.use(sinonChai);
 let table;
 
 describe('KaidTable', () => {
-  beforeEach(() => table = new KaidTable());
+  // beforeEach(() => table = new KaidTable());
 
-  it('should get the library\'s name', () => {
-    const spy = sinon.spy(table, 'name');
-    const name = table.name();
-    expect(name).to.eql('kaid.table');
-    spy.restore();
-    expect(spy).to.have.been.called;
-  });
+  // it('should get the library\'s name', () => {
+  //   const spy = sinon.spy(table, 'name');
+  //   const name = table.name();
+  //   expect(name).to.eql('kaid.table');
+  //   spy.restore();
+  //   expect(spy).to.have.been.called;
+  // });
 });
