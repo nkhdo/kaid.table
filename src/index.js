@@ -1,6 +1,6 @@
 class KaidTable {
   constructor() {
-    this._name = 'kaid.table';
+    this._name = 'KaidTable';
   }
 
   name() {

@@ -3,7 +3,7 @@ const mode = require('yargs').argv.mode;
 const libraryTarget = require('yargs').argv['output-library-target'];
 const pkg = require('./package.json');
 
-const libraryName = 'kaid.table';
+const libraryName = 'KaidTable';
 
 const banner = `${pkg.name}
 ${pkg.description}\n

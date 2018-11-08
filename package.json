@@ -1,8 +1,8 @@
 {
-  "name": "kaid.table",
+  "name": "KaidTable",
   "version": "1.0.0",
   "description": "Simple data table library",
-  "main": "lib/Library.js",
+  "main": "lib/KaidTable.js",
   "files": [
     "src/",
     "dist/",
