@@ -1,5 +1,5 @@
 import Snabbdom from 'snabbdom-pragma'; // eslint-disable-line
-import { emptyElement } from './utils';
+import { isElement, emptyElement } from './utils';
 import { patch } from './dom';
 class KaidTable {
   constructor(container, { columns = null, rows = null } = {}) {
@@ -18,6 +18,9 @@ class KaidTable {
   }
 
   validate() {
+    if (!isElement(this.container)) {
+      throw new Error('Container must be a DOM element');
+    }
     if (!this.columns) {
       throw new Error('Missing required option: columns');
     }
