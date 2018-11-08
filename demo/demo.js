@@ -17,16 +17,20 @@ const columns = [{
 }, {
   name: 'phone',
   type: String
+}, {
+  name: 'bio',
+  type: String
 }];
 
-const numRows = 1000;
+const numRows = 10000;
 const rows = [...Array(numRows).keys()].map(idx => {
   const id = idx + 1;
   const name = faker.name.findName();
   const email = faker.internet.email();
   const address = faker.address.streetAddress();
   const phone = faker.phone.phoneNumber();
-  return [id, name, email, address, phone];
+  const bio = faker.lorem.sentence();
+  return [id, name, email, address, phone, bio];
 });
 
 const options = {
