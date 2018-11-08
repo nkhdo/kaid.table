@@ -1,4 +1,4 @@
-class Library {
+class KaidTable {
   constructor() {
     this._name = 'kaid.table';
   }
@@ -8,4 +8,4 @@ class Library {
   }
 }
 
-export default Library;
+export default KaidTable;
