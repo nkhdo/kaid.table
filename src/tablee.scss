@@ -1,0 +1,16 @@
+$border-color: #ccc;
+
+.kdtbl-table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $border-color;
+  .kdtbl-cell {
+    min-width: 50px;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 1px solid $border-color;
+  }
+}

@@ -1,15 +1,18 @@
 import Snabbdom from 'snabbdom-pragma'; // eslint-disable-line
+import './tablee.scss';
 import { isElement, emptyElement } from './utils';
 import { patch } from './dom';
-class KaidTable {
+class Tablee {
   constructor(container, { columns = null, rows = null } = {}) {
-    this._name = 'KaidTable';
+    this._name = 'Tablee';
     this.container = container;
     this.columns = columns;
     this.rows = rows;
+    this.table = document.createElement('table');
 
     this.validate();
     emptyElement(this.container);
+    this.container.append(this.table);
     this.render();
   }
 
@@ -30,23 +33,24 @@ class KaidTable {
   }
 
   render() {
-    const table = <table>
-      <thead>
-        <tr>
-          {this.columns.map(column => <th>{column.name}</th>)}
-        </tr>
-      </thead>
-      <tbody>
-        {this.rows.map(row =>
-          <tr>
-            {row.map(cell => <td>{cell}</td>)}
+    const table =
+      <table className='kdtbl-table'>
+        <thead className='kdtbl-thead'>
+          <tr className='kdtbl-tr'>
+            {this.columns.map(column => <th className='kdtbl-th kdtbl-cell'>{column.name}</th>)}
           </tr>
-        )}
-      </tbody>
-    </table>;
+        </thead>
+        <tbody className='kdtbl-tbody'>
+          {this.rows.map(row =>
+            <tr className='kdtbl-tr'>
+              {row.map(cell => <td className='kdtbl-td kdtbl-cell'>{cell}</td>)}
+            </tr>
+          )}
+        </tbody>
+      </table>;
 
-    patch(this.container, table);
+    patch(this.table, table);
   }
 }
 
-export default KaidTable;
+export default Tablee;

@@ -1,4 +1,4 @@
-const KaidTable = window.KaidTable;
+const Tablee = window.Tablee;
 const faker = window.faker;
 
 const container = document.querySelector('#kaid-table');
@@ -38,4 +38,4 @@ const options = {
   rows
 };
 
-new KaidTable(container, options);
+new Tablee(container, options);

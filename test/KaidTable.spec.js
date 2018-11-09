@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import chai from 'chai';
-import KaidTable from '../src';
+import Tablee from '../src';
 
 const { expect } = chai;
 
@@ -9,8 +9,8 @@ chai.use(sinonChai);
 
 let table;
 
-describe('KaidTable', () => {
-  // beforeEach(() => table = new KaidTable());
+describe('Tablee', () => {
+  // beforeEach(() => table = new Tablee());
 
   // it('should get the library\'s name', () => {
   //   const spy = sinon.spy(table, 'name');

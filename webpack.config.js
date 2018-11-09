@@ -3,7 +3,7 @@ const mode = require('yargs').argv.mode;
 const libraryTarget = require('yargs').argv['output-library-target'];
 const pkg = require('./package.json');
 
-const libraryName = 'KaidTable';
+const libraryName = 'Tablee';
 
 const banner = `${pkg.name}
 ${pkg.description}\n
@@ -38,6 +38,14 @@ module.exports = {
         test: /(\.jsx|\.js)$/,
         loader: 'eslint-loader',
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
